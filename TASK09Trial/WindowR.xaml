@@ -1,0 +1,109 @@
+﻿<Window x:Class="TASK09Trial.WindowR"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TASK09Trial"
+             mc:Ignorable="d" 
+             Height="600" Width="250">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="1.4*"></RowDefinition>
+            <RowDefinition Height="0.45*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="0">
+            <Label Content="Enter Your Name:(Upper Case)" Margin="1,0,0,0"/>
+            <TextBox x:Name="textBox" Width="200" Height="20" 
+                     TextChanged="TextBox_TextChanged"
+                     HorizontalAlignment="Left" Margin="5,0,5,0"
+                     VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label   x:Name="warningLabel" Content="Please enter uppercase letters only."
+                     BorderThickness="5" Foreground="Red" Visibility="Collapsed" Margin="-4,-10,0,10"/>
+        </StackPanel>
+        
+        
+        <StackPanel Grid.Row="1">
+            <Label Content="Select Base Level" Margin="1,0,0,0"/>
+            <ComboBox x:Name="LevelsCombo" Width="200" Height="25" 
+                      HorizontalAlignment="Left" Margin="5,0,5,0"
+                      VerticalAlignment="Center" 
+                      VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Label Content="Select Wall Type" Margin="1,0,0,0"/>
+            <ComboBox x:Name="WallTypesCombo" Width="200" Height="25" 
+              HorizontalAlignment="Left" Margin="5,0,5,0"
+              VerticalAlignment="Center" 
+              VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="3">
+        <StackPanel>
+            <Label Content="Enter The Height:" Margin="1,0,0,0"/>
+            <TextBox x:Name="HeightBox" Width="200" Height="25" 
+               HorizontalAlignment="Left" Margin="5,0,5,0"
+               VerticalAlignment="Center" 
+               VerticalContentAlignment="Center"
+                     TextChanged="HeightBox_TextChanged"/>
+            <Label x:Name="warningLabel01" Content="Please enter numbers only."
+                    BorderThickness="5" Foreground="Red" Visibility="Collapsed" Margin="-4,-10,0,10"/>
+        </StackPanel>
+            <StackPanel>
+                <Label Content="Enter The Scale:" Margin="1,0,0,0"/>
+                <TextBox x:Name="ScaleBox" Width="200" Height="25" 
+                    HorizontalAlignment="Left" Margin="5,0,5,0"
+                    VerticalAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    TextChanged="ScaleBox_TextChanged"/>
+                <Label x:Name="warningLabel02" Content="Please enter numbers only."
+                    BorderThickness="5" Foreground="Red" Visibility="Collapsed" Margin="-4,-10,0,10"/>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Height="20">
+            <CheckBox Content="Structural" x:Name="struc" Width="104" Checked="CheckBox_Checked" />
+            <CheckBox Content="NonStructural" x:Name="nostruc" Checked="CheckBox_Checked"/>
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal" Height="30">
+                <CheckBox Content="Flip" x:Name="flipopt" Width="105" Checked="flipopt_Checked" />
+                <CheckBox Content="NoFlip" x:Name="Noflipopt" Width="82" Checked="flipopt_Checked"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="orgionradio" Content="Default(Origin Point)"   Width="140" Checked="RadioButton_Checked" ></RadioButton>
+                <RadioButton x:Name="neworgionradio" Content="Pick Point"   Checked="RadioButton_Checked"></RadioButton>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="X:"/>
+                <TextBox x:Name="XCoordinates"  Width="200" Height="25"  HorizontalAlignment="Left" Background="AliceBlue"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Y:"/>
+                <TextBox x:Name="YCoordinates" Width="200" Height="25"  HorizontalAlignment="Left" Background="AliceBlue"
+                           />
+            </StackPanel>
+        </StackPanel>
+        
+
+        <StackPanel Grid.Row="5" Orientation="Vertical">
+            <Button x:Name="analysisbutton" Content="Analysis" Width="60" Height="20" Margin="0,2,0,0" Click="analysisbutton_Click"
+                    />
+            <TextBlock  Background="MintCream" Height="96"
+                      x:Name="analysisBox" FontSize="10" Text="hiiifsfsfj"/>
+        </StackPanel>
+
+        
+        <StackPanel  Grid.Row="6">
+            <Button x:Name="Apply" Content="Apply" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Width="50" Height="30" 
+                    Margin="0,5,0,0" Background="Gray" Click="Apply_Click"/>
+        </StackPanel>
+       
+    </Grid>
+    
+</Window>

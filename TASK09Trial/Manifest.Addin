@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>TextToWall</Name>
+		<Assembly>TASK09Trial.dll</Assembly>
+		<FullClassName>TASK09Trial.TextToWall</FullClassName>
+		<Text>TextToWall</Text>
+		<Description>Places the Group at Particular Point</Description>
+		<AddInId>
+			0329D143-4602-4027-AD2F-E43EF4A0C247
+		</AddInId>
+		<VendorId>Ashraf</VendorId>
+		<VendorDescription>BIM Developer, ashrafabbasramadan@gmail.com</VendorDescription>
+		<TooltipImage>c:\MyProgram\Autodesk.png</TooltipImage>
+		<LargeImage>C:\Users\SERVER\Downloads\WavingHand.png</LargeImage>
+	</AddIn>
+</RevitAddIns>
+
